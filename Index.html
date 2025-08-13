@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xin Lỗi Bro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            max-width: 600px;
+            width: 90%;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .emoji {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        h1 {
+            color: #4a5568;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .message {
+            color: #666;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .hearts {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+        }
+
+        .heart {
+            color: #ff6b6b;
+            font-size: 30px;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        .heart:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .heart:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .apology-text {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .promise {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .floating-heart {
+            position: absolute;
+            color: rgba(255, 107, 107, 0.6);
+            font-size: 20px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+        }
+
+        .floating-heart:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .floating-heart:nth-child(2) { top: 20%; right: 15%; animation-delay: 1s; }
+        .floating-heart:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 2s; }
+        .floating-heart:nth-child(4) { bottom: 20%; right: 10%; animation-delay: 3s; }
+
+        .signature {
+            margin-top: 30px;
+            font-style: italic;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .message {
+                font-size: 1.1em;
+            }
+            
+            .emoji {
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-heart">💝</div>
+        <div class="floating-heart">🤝</div>
+        <div class="floating-heart">💕</div>
+        <div class="floating-heart">🙏</div>
+    </div>
+
+    <div class="container">
+        <div class="emoji">😔</div>
+        
+        <h1>XIN LỖI BRO!</h1>
+        
+        <div class="message">
+            Tôi biết tôi đã làm bro <span class="highlight">thất vọng</span> và cảm thấy rất <span class="highlight">hối hận</span> về điều đó.
+        </div>
+
+        <div class="hearts">
+            <span class="heart">💔</span>
+            <span class="heart">😢</span>
+            <span class="heart">🙏</span>
+        </div>
+
+        <div class="apology-text">
+            "Lỗi lầm của tôi đã làm tổn thương tình bro của chúng ta"
+        </div>
+
+        <div class="promise">
+            <strong>🤝 Lời Hứa Của Tôi Dành Cho Bro:</strong><br><br>
+            • Tôi sẽ không bao giờ lặp lại sai lầm này nữa<br>
+            • Tôi sẽ lắng nghe và tôn trọng bro hơn<br>
+            • Tôi sẽ cố gắng trở thành một người bro tốt hơn<br>
+            • Tôi hy vọng bro có thể tha thứ cho tôi
+        </div>
+
+        <div class="message">
+            Tình bạn của chúng ta rất <span class="highlight">quý giá</span> với tôi.<br>
+            Tôi không muốn mất đi một người bro tuyệt vời như bạn.
+        </div>
+
+        <div class="hearts">
+            <span class="heart">❤️</span>
+            <span class="heart">🤗</span>
+            <span class="heart">✨</span>
+        </div>
+
+        <div class="signature">
+            Với tất cả sự chân thành,<br>
+            <strong>Bro hối lỗi của bạn</strong> 💝
+        </div>
+    </div>
+</body>
+</html>
